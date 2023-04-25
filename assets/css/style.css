@@ -1,10 +1,4 @@
 html {
-  background: url(/assets/images/ripped-paper-png-cliparts-35.png) no-repeat
-    center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   scroll-behavior: smooth;
 }
 
@@ -17,16 +11,25 @@ html {
 /* navbar */
 
 header {
+  background-image: url(/assets/images/pictures/IMG_4521.JPG);
+  background-size: cover;
+  background-position: center;
   background-color: #333;
   color: #fff;
   padding: 20px;
 }
 
+/* header img {
+  
+} */
+
 nav a {
-  font-family: "Lekton", sans-serif;
+  display: inline-block;
+  font-family: "Special Elite", cursive;
   color: #fff;
   text-decoration: none;
-  margin: 1.1rem;
+  padding-bottom: 1rem;
+  margin: 0.8rem;
   top: 0;
 }
 
@@ -35,8 +38,7 @@ nav a {
 /* body */
 
 body {
-  /* background-image: url(https://www.freepnglogos.com/uploads/paper-png/ripped-paper-png-cliparts-35.png); */
-  background-color: #68686810;
+  background-color: #333;
   margin: 0;
   padding: 0;
   font-size: 16px;
@@ -48,31 +50,40 @@ body {
 /* main hero/title section */
 
 .hero {
+  background-image: url(/assets/images/pictures/IMG_4509.JPG);
+  background-size: cover;
+  background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.hero-card {
-  border-radius: 4px;
-  width: 100%;
-  max-width: 500px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  padding: 4rem;
-  text-align: center;
+  border-radius: 10px;
+  height: 50rem;
+  padding: 20px;
+  box-shadow: 0 0 20px rgb(0, 0, 0);
 }
 
 .hero h1 {
-  font-family: "Cousine", monospace;
+  font-family: "Gloria Hallelujah", cursive;
   font-size: 48px;
   margin: 0;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
+/* h1::before,
+h1::after {
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+} */
+
 .hero p {
-  font-family: "Lekton", sans-serif;
+  font-family: "Special Elite", cursive;
   font-size: 24px;
   margin: 20px 0;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* 
