@@ -63,21 +63,35 @@ body {
   box-shadow: 0 0 20px rgb(0, 0, 0);
 }
 
-.hero h1 {
+h1 {
   font-family: "Gloria Hallelujah", cursive;
   font-size: 48px;
+  position: relative;
   margin: 0;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  /* text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); */
 }
 
-/* h1::before,
+h1::before,
 h1::after {
-  content: '';
+  content: "";
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-} */
+  /* text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); */
+}
+
+h1::before {
+  background: teal;
+  animation: typewriter 5s ease;
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
 
 .hero p {
   font-family: "Special Elite", cursive;
