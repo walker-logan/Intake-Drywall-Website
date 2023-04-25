@@ -6,8 +6,6 @@ html {
   box-sizing: border-box;
 }
 
-/* 
- */
 /* navbar */
 
 header {
@@ -19,34 +17,24 @@ header {
   padding: 20px;
 }
 
-/* header img {
-  
-} */
-
 nav a {
   display: inline-block;
   font-family: "Special Elite", cursive;
   color: #fff;
   text-decoration: none;
   padding-bottom: 1rem;
-  margin: 0.8rem;
+  margin: 0.73rem;
   top: 0;
 }
 
-/* 
- */
 /* body */
 
 body {
   background-color: #333;
   margin: 0;
   padding: 0;
-  font-size: 16px;
-  line-height: 1.5;
 }
 
-/* 
- */
 /* main hero/title section */
 
 .hero {
@@ -60,15 +48,16 @@ body {
   border-radius: 10px;
   height: 50rem;
   padding: 20px;
-  box-shadow: 0 0 20px rgb(0, 0, 0);
+  margin-bottom: 2rem;
+  box-shadow: 0 0 10px 4px rgb(0, 0, 0);
 }
 
 h1 {
   font-family: "Gloria Hallelujah", cursive;
-  font-size: 48px;
+  font-size: 40px;
   position: relative;
   margin: 0;
-  /* text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); */
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 
 h1::before,
@@ -79,7 +68,7 @@ h1::after {
   right: 0;
   bottom: 0;
   left: 0;
-  /* text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); */
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 h1::before {
@@ -97,11 +86,39 @@ h1::before {
   font-family: "Special Elite", cursive;
   font-size: 24px;
   margin: 20px 0;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 
-/* 
- */
+/* about section */
+
+.about-section {
+  background-image: url(/assets/images/pictures/IMG_4526.JPG);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+  color: whitesmoke;
+}
+
+.about-card {
+  background-color: #00000067;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  padding: 3rem;
+  text-align: center;
+}
+
+.about-card h2 {
+  font-family: "Special Elite", cursive;
+  font-size: 24px;
+  margin: 4rem;
+  text-align: center;
+}
+
 /* music card */
 
 .streaming-section {
@@ -109,49 +126,34 @@ h1::before {
   justify-content: center;
   align-items: center;
   padding: 20px;
+  margin-top: 2rem;
 }
 
 .streaming-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #fff;
   border-radius: 4px;
   width: 100%;
   max-width: 500px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  padding: 20px;
-  text-align: center;
+}
+
+.streaming-icon {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 4rem;
 }
 
 .streaming-card h2 {
-  font-family: "Lekton", sans-serif;
+  font-family: "Special Elite", cursive;
   font-size: 24px;
   margin: 4rem;
   text-align: center;
 }
 
-.streaming-links {
-  list-style: none;
-  margin: 0;
-  padding: 2rem 2rem 4rem;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-}
-
-.streaming-links li {
-  margin: 10px;
-  display: flex;
-  padding: 20px 0;
-}
-
-.streaming-icon {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 10px;
-}
-
-/* 
- */
 /* contact us section */
 
 .contact-section {
@@ -172,22 +174,21 @@ h1::before {
 }
 
 .contact-card h2 {
-  font-family: "Lekton", sans-serif;
+  font-family: "Special Elite", cursive;
   font-size: 24px;
   margin: 4rem;
   text-align: center;
 }
 
-/* 
- */
 /* adjusting for screen size */
 
 @media screen and (max-width: 767px) {
-  .streaming-card {
-    background-color: #fff;
+  .streaming-card .about-section {
     border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 300px;
     padding: 20px;
     text-align: center;
   }
 }
+
