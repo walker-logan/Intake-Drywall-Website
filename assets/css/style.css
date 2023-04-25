@@ -1,10 +1,19 @@
 html {
+  background: url(/assets/images/ripped-paper-png-cliparts-35.png) no-repeat
+    center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   scroll-behavior: smooth;
 }
 
+* {
+  box-sizing: border-box;
+}
 
-
-
+/* 
+ */
 /* navbar */
 
 header {
@@ -17,36 +26,41 @@ nav a {
   font-family: "Lekton", sans-serif;
   color: #fff;
   text-decoration: none;
-  margin-right: 20px;
+  margin: 1.1rem;
+  top: 0;
 }
 
-nav a:last-child {
-  margin-right: 0;
-}
-
-
-
+/* 
+ */
 /* body */
 
 body {
+  /* background-image: url(https://www.freepnglogos.com/uploads/paper-png/ripped-paper-png-cliparts-35.png); */
+  background-color: #68686810;
   margin: 0;
   padding: 0;
   font-size: 16px;
   line-height: 1.5;
 }
 
-
-
-/* main hero */
+/* 
+ */
+/* main hero/title section */
 
 .hero {
-  background-size: cover;
-  background-position: center;
-  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.hero-card {
+  border-radius: 4px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  padding: 4rem;
+  text-align: center;
 }
 
 .hero h1 {
@@ -59,6 +73,27 @@ body {
   font-family: "Lekton", sans-serif;
   font-size: 24px;
   margin: 20px 0;
+}
+
+/* 
+ */
+/* music card */
+
+.streaming-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.streaming-card {
+  background-color: #fff;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  text-align: center;
 }
 
 .streaming-card h2 {
@@ -81,6 +116,7 @@ body {
 .streaming-links li {
   margin: 10px;
   display: flex;
+  padding: 20px 0;
 }
 
 .streaming-icon {
@@ -89,8 +125,36 @@ body {
   margin-bottom: 10px;
 }
 
+/* 
+ */
+/* contact us section */
 
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
 
+.contact-card {
+  background-color: #fff;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-card h2 {
+  font-family: "Lekton", sans-serif;
+  font-size: 24px;
+  margin: 4rem;
+  text-align: center;
+}
+
+/* 
+ */
 /* adjusting for screen size */
 
 @media screen and (max-width: 767px) {
