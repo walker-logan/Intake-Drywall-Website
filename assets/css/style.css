@@ -1,3 +1,7 @@
+:root {
+  --typewriterCharacters: 14;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -15,6 +19,7 @@ header {
   background-color: #333;
   color: #fff;
   padding: 20px;
+  text-shadow: 2px 5px 1px rgb(0, 0, 0);
 }
 
 nav a {
@@ -54,104 +59,141 @@ body {
 
 h1 {
   font-family: "Gloria Hallelujah", cursive;
-  font-size: 40px;
+  font-size: 35px;
+  color: whitesmoke;
   position: relative;
   margin: 0;
+  width: max-content;
   text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 
-h1::before,
-h1::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
-
-h1::before {
-  background: teal;
-  animation: typewriter 5s ease;
-}
-
-@keyframes typewriter {
-  to {
-    left: 100%;
-  }
+.typewrite {
+  text-decoration: none;
+  color: whitesmoke;
 }
 
 .hero p {
   font-family: "Special Elite", cursive;
   font-size: 24px;
   margin: 20px 0;
+  opacity: 0;
+  transform: translateY(4rem);
+  animation: fadeInUp 3s ease 1s forwards;
   text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 
+/* @keyframes identifier {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */
+
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+}
+
+.animatedFadeInUp {
+  opacity: 0;
+}
+
+.fadeInUp {
+  opacity: 0;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+}
 /* about section */
 
 .about-section {
-  background-image: url(/assets/images/pictures/IMG_4526.JPG);
+  background-image: url(/assets/images/pictures/IMG_0043.jpg);
   background-size: cover;
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 3rem;
+  padding: 2rem 0 4rem 0;
   color: whitesmoke;
 }
 
 .about-card {
-  background-color: #00000067;
   border-radius: 4px;
   width: 100%;
   max-width: 500px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  padding: 3rem;
+  padding: 2rem;
   text-align: center;
+  font-family: "Special Elite", cursive;
+  font-size: 13px;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 
 .about-card h2 {
   font-family: "Special Elite", cursive;
   font-size: 24px;
   margin: 4rem;
-  text-align: center;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 
-/* music card */
+/* music section */
 
-.streaming-section {
+.music-section {
+  background-image: url(/assets/images/pictures/IMG_0379.jpg);
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  margin-top: 2rem;
+  padding: 3rem 0 6rem;
 }
 
-.streaming-card {
+.music-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fff;
   border-radius: 4px;
   width: 100%;
   max-width: 500px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.streaming-icon {
+.music-icon {
   display: flex;
-  width: 60px;
-  height: 60px;
+  width: 90px;
+  height: 90px;
   margin-bottom: 4rem;
 }
 
-.streaming-card h2 {
+.music-card h2 {
   font-family: "Special Elite", cursive;
   font-size: 24px;
+  color: whitesmoke;
   margin: 4rem;
   text-align: center;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 
 /* contact us section */
@@ -183,7 +225,7 @@ h1::before {
 /* adjusting for screen size */
 
 @media screen and (max-width: 767px) {
-  .streaming-card .about-section {
+  .music-card .about-section {
     border-radius: 4px;
     width: 100%;
     max-width: 300px;
@@ -191,4 +233,3 @@ h1::before {
     text-align: center;
   }
 }
-
