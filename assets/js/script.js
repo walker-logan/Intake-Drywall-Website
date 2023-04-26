@@ -60,6 +60,7 @@ window.onload = function () {
 };
 
 // scrolling effect on header
+
 function parallaxEffect1() {
   var speed = 0.5;
   var header = document.querySelector("header");
@@ -68,14 +69,29 @@ function parallaxEffect1() {
   header.style.backgroundPosition = bgPosition;
 }
 window.addEventListener("scroll", parallaxEffect1);
+
 // scrolling effect on music section
+
 function parallaxEffect2() {
-  var speed = 0.5;
-  var musicSection = document.querySelector('.music-section')
+  var speed = 0.6;
+  var musicSection = document.querySelector(".music-section");
   var windowYOffset = window.pageYOffset;
-  var bgPosition = "50% " + (windowYOffset * speed) + "px";
+  var bgPosition = "50% " + windowYOffset * speed + "px";
   musicSection.style.backgroundPosition = bgPosition;
 }
-window.addEventListener("scroll", parallaxEffect2)
+window.addEventListener("scroll", parallaxEffect2);
 
+// making sections fade into view
 
+const faders = document.querySelectorAll(".fade-in");
+const appearOptions = {};
+
+const appearOnScroll = new IntersectionObserver(function (
+  entries,
+  appearOnScroll
+) {
+  entries.forEach(entry => () {
+    if (!entry.isIntersecting)
+  })
+},
+appearOptions);

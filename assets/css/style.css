@@ -18,8 +18,12 @@ header {
   background-position: center;
   background-color: #333;
   color: #fff;
-  padding: 20px;
+  padding: 50px;
   text-shadow: 2px 5px 1px rgb(0, 0, 0);
+}
+
+nav {
+  position: fixed;
 }
 
 nav a {
@@ -28,7 +32,7 @@ nav a {
   color: #fff;
   text-decoration: none;
   padding-bottom: 1rem;
-  margin: 0.73rem;
+  margin: 1rem;
   top: 0;
 }
 
@@ -82,13 +86,6 @@ h1 {
   text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 
-/* @keyframes identifier {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-} */
-
 @keyframes fadeInUp {
   from {
     transform: translate3d(0, 40px, 0);
@@ -128,6 +125,15 @@ h1 {
   -webkit-animation-name: fadeInUp;
 }
 /* about section */
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
+}
 
 .about-section {
   background-image: url(/assets/images/pictures/IMG_0043.jpg);
@@ -185,6 +191,8 @@ h1 {
   width: 90px;
   height: 90px;
   margin-bottom: 4rem;
+  box-shadow: 0 0 10px 4px rgb(0, 0, 0);
+  border-radius: 2rem;
 }
 
 .music-card h2 {
@@ -199,6 +207,9 @@ h1 {
 /* contact us section */
 
 .contact-section {
+  background-image: url(/assets/images/pictures/IMG_9963.jpeg);
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -206,11 +217,10 @@ h1 {
 }
 
 .contact-card {
-  background-color: #fff;
+  color: whitesmoke;
   border-radius: 4px;
   width: 100%;
   max-width: 500px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   padding: 20px;
   text-align: center;
 }
@@ -220,11 +230,12 @@ h1 {
   font-size: 24px;
   margin: 4rem;
   text-align: center;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 
 /* adjusting for screen size */
 
-@media screen and (max-width: 767px) {
+/* @media screen and (max-width: 767px) {
   .music-card .about-section {
     border-radius: 4px;
     width: 100%;
@@ -232,4 +243,4 @@ h1 {
     padding: 20px;
     text-align: center;
   }
-}
+} */
