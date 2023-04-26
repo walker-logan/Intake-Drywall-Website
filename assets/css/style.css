@@ -39,7 +39,9 @@ nav a {
 /* body */
 
 body {
-  background-color: #333;
+  background-image: url(/assets/images/pictures/IMG_4521.JPG);
+  background-size: contain;
+  background-position: center;
   margin: 0;
   padding: 0;
 }
@@ -124,11 +126,12 @@ h1 {
   animation-name: fadeInUp;
   -webkit-animation-name: fadeInUp;
 }
+
 /* about section */
 
 .fade-in {
   opacity: 0;
-  transition: opacity 250ms ease-in;
+  transition: opacity 400ms ease-in;
 }
 
 .fade-in.appear {
@@ -144,13 +147,13 @@ h1 {
   align-items: center;
   padding: 2rem 0 4rem 0;
   color: whitesmoke;
+  border: 20px #33333300 solid;
 }
 
 .about-card {
   border-radius: 4px;
   width: 100%;
   max-width: 500px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   padding: 2rem;
   text-align: center;
   font-family: "Special Elite", cursive;
@@ -160,7 +163,7 @@ h1 {
 
 .about-card h2 {
   font-family: "Special Elite", cursive;
-  font-size: 24px;
+  font-size: 30px;
   margin: 4rem;
   text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
